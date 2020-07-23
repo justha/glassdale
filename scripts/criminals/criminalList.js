@@ -1,4 +1,4 @@
-import { useCriminals, getCriminals } from "./criminalProvider.js";
+import { useCriminals, getCriminals } from "./CriminalProvider.js";
 import { criminalHtml } from "./criminalHtml.js";
 
 const contentTarget = document.querySelector(".container__criminals")
@@ -14,8 +14,10 @@ export const criminalList = () => {
         })
         contentTarget.innerHTML =  
         `
-        <article class="title">Criminals</article>
+        <h3>Glassdale Criminals</h3>
+        <article class="criminal__list">
         ${htmlRepresentations}
+        </article>
         `        
     })
 }

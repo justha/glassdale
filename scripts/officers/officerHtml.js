@@ -1,6 +1,7 @@
 export const officerHtml = (officerObj) => {
     return `
-        <section class="officers">
-        <div><b>Officer: </b>${officerObj.name}</div>
-        </section>`
+        <section class="officer__card">
+            <div class="officer__name">${officerObj.name}</div>
+        </section>
+    `
 }
