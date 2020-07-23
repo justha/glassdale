@@ -1,6 +1,6 @@
-import { officerList } from "./officers/officerList.js";
+import { officerList } from "./officers/OfficerList.js";
 officerList()
 
-import { criminalList } from "./criminals/criminalList.js";
+import { criminalList } from "./criminals/CriminalList.js";
 criminalList()
 

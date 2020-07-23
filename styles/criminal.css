@@ -1,0 +1,23 @@
+h3 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.criminal__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.criminal__card {
+    font-size: small;
+    margin: .5%;
+    padding: 1.5%;
+    border: .5px solid lightgrey;
+    width: 15rem;
+}
+
+.criminal__name {
+    font-size: medium;
+    font-weight: bold;
+    padding: 0 0 .5rem 0;
+}

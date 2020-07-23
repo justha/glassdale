@@ -1,0 +1,22 @@
+h2 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.officer__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.officer__card { s
+    font-size: small;
+    margin: .5%;
+    padding: 1.5%;
+    border: .5px solid lightgrey;
+    width: 15rem;
+}
+
+.officer__name {
+    font-size: medium;
+    font-weight: bold;
+}
