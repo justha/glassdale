@@ -1,13 +1,12 @@
 // Criminal--Name, Age, Conviction, Dates of Incarceration
 
-const criminalHtml = (criminalObj) => {
+export const criminalHtml = (criminalObj) => {
     return `
-    <section>
-    Name: ${criminalObj.name}
-    Age: ${criminalObj.age}
-    Conviction: ${criminalObj.conviction}
-    Incarceration Start: ${criminalObj.incarceration.start}
-    Incarceration End: ${criminalObj.incarceration.end}
-    </section>
+        <section class="criminals">
+        <div><b>Name: </b>${criminalObj.name}</div>
+        <div><b>Age: </b>${criminalObj.age}</div>
+        <div><b>Conviction: </b>${criminalObj.conviction}</div>
+        <div><b>Incarceration: </b>${criminalObj.incarceration}</div>
+        </section>
     `
 }
