@@ -2,9 +2,9 @@ let criminals = []
 
 export const getCriminals = () => {
     return fetch ("https://criminals.glassdale.us/criminals") 
-        .then (Response => Response.json())
-        .then (parseCriminals => {
-            criminals = parseCriminals
+        .then (response => response.json())
+        .then (criminalsArray => {
+            criminals = criminalsArray
         })
 }
 

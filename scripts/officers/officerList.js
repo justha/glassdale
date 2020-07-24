@@ -1,5 +1,5 @@
 import { useOfficers, getOfficers } from "./OfficerProvider.js";
-import { officerHtml } from "./officerHtml.js";
+import { officerHtml } from "./OfficerHtml.js";
 
 const contentTarget = document.querySelector(".container__officers")
 
@@ -14,7 +14,7 @@ export const officerList = () => {
         })
         contentTarget.innerHTML =  
         `
-        <h2>Glassdale Police Officers</h2>
+        <h3>Glassdale Police Officers</h3>
         <article class="officer__list">
         ${htmlRepresentations}
         </article>
