@@ -1,4 +1,4 @@
-import { getCrimes, useCrimes } from "./ConvictionProvider.js";
+import { getCrimes, useCrimes } from "./CrimeProvider.js";
 
 const contentTarget = document.querySelector(".filters__crime")
 
