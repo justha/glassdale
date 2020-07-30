@@ -5,7 +5,7 @@ const contentTarget = document.querySelector(".filters__officer")
 const render = officersCollection => {
     contentTarget.innerHTML = `
         <select class="dropdown" id="officerSelect">
-            <option value="0">Officer:</option>
+            <option value="0">Please select an officer...</option>
                 ${
                     officersCollection.map(
                         officersObj => {
