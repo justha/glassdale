@@ -8,6 +8,7 @@ export const criminalHtml = (criminalObj) => {
             <div><b>Crime: </b>${criminalObj.conviction}</div>
             <div><b>Term Start: </b>${new Date(criminalObj.incarceration.start).toLocaleDateString('en-US')}</div>
             <div><b>Term End: </b>${new Date(criminalObj.incarceration.end).toLocaleDateString('en-US')}</div>
-        </section>
+            <div><b>Arresting Officer: </b>${criminalObj.arrestingOfficer}</div>
+            </section>
     `
 }
