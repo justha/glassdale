@@ -6,10 +6,12 @@ const contentTarget = document.querySelector(".container__criminals")
 const eventHub = document.querySelector(".container")
 
 
-// Event Listener--Hear ===================================
+// Event Listener--hear "crimeSelected" =========================
 eventHub.addEventListener ("crimeSelected", (changeEvent) => {
-    const crimeSelected = changeEvent.detail.crimeId 
 
+    const crimeSelected = changeEvent.detail.crimeId 
+    
+    
     // .find() the crime obj that correlates to the crimeId selected from CrimeSelect drop-down
     // use parseInt() to convert crime.id value string into an integer (to match value format in crimesArray)
     const crimesArray = useCrimes()
@@ -17,12 +19,28 @@ eventHub.addEventListener ("crimeSelected", (changeEvent) => {
         return parseInt(crimeSelected) === crime.id
     })
 
+
     const allCriminals = useCriminals()
     const filteredCriminals = allCriminals.filter((criminalObj) => {
         return crimeObj.name === criminalObj.conviction
     })
+
     render(filteredCriminals)
 })
+
+
+// Event Listener--hear "officerSelected"=========================
+eventHub.addEventListener("officerSelected", (changeEvent) => {
+
+    const officerSelected = changeEvent.detail.officerName
+
+    const allCriminals = useCriminals()
+    const filteredCriminals = allCriminals.filter((officerObj) => {
+        return officerSelected === officerObj.arrestingOfficer
+    })
+
+    render(filteredCriminals)   
+})   
 
 
 // render function ========================================
