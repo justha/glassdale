@@ -21,6 +21,7 @@ eventHub.addEventListener ("crimeSelected", (changeEvent) => {
     const filteredCriminals = allCriminals.filter((criminalObj) => {
         return crimeObj.name === criminalObj.conviction
     })
+    render(filteredCriminals)
 })
 
 
