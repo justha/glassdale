@@ -1,8 +1,13 @@
+h3 {
+    font-size: large;
+    margin: 0;
+}
+
 #noteForm {
     display: flex;
     flex-direction: column;
-    padding: .5rem;
-    margin: 1rem 0 2rem 0;
+    width: 20rem;
+    margin: 1rem;
 }
 
 #noteForm--saveNote {
