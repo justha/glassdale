@@ -9,3 +9,6 @@ CrimeSelect()
 
 import { OfficerSelect } from "./officers/OfficerSelect.js";
 OfficerSelect()
+
+import { noteForm } from "./notes/NoteForm.js";
+noteForm()

@@ -17,7 +17,7 @@ contentTarget.addEventListener("change", (changeEvent) => {
 
 
 
-// CrimeSelect Button ===============================================
+// CrimeSelect button ===============================================
 const render = crimesCollection => {
     contentTarget.innerHTML = `
         <select class="dropdown" id="crimeSelect">

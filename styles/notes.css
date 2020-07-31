@@ -1,0 +1,10 @@
+#noteForm {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+#noteForm--saveNote {
+    width: 5rem;
+}
