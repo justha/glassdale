@@ -1,0 +1,15 @@
+h3 {
+    font-size: large;
+    margin: 0;
+}
+
+#noteForm {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin: 1rem;
+}
+
+#noteForm--saveNote {
+    width: 5rem;
+}

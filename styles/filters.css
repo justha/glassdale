@@ -1,0 +1,11 @@
+h2 {
+    font-size: large;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
+    width: 25rem;
+}

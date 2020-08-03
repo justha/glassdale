@@ -1,11 +1,15 @@
 // import { officerList } from "./officers/OfficerList.js";
-// officerList()
-
 import { criminalList } from "./criminals/CriminalList.js";
-criminalList()
-
 import { CrimeSelect } from "./crimes/CrimeSelect.js";
-CrimeSelect()
-
 import { OfficerSelect } from "./officers/OfficerSelect.js";
+import { noteForm } from "./notes/NoteForm.js";
+// import { noteHistoryButton } from "./notes/NoteHistoryButton.js";
+
+
+// officerList()
+criminalList()
+CrimeSelect()
 OfficerSelect()
+noteForm()
+// noteHistoryButton()
+
