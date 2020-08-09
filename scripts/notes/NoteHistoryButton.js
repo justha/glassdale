@@ -1,5 +1,5 @@
-// const contentTarget = document.querySelector(".container__noteHistory")
-// const eventHub = document.querySelector(".container")
+const contentTarget = document.querySelector(".container__noteHistory")
+const eventHub = document.querySelector(".container")
 
 // eventHub.addEventListener("click", (clickEvent) => {
 //     if (clickEvent.target.id === "noteHistory") {
@@ -8,6 +8,8 @@
 //     }
 // })
 
-// export const noteHistoryButton = () => {
-//     contentTarget.innerHTML = "<button id=`noteHistory`>Note History</button>"
-// }
+export const noteHistoryButton = () => {
+    contentTarget.innerHTML = "<button id=`noteHistory`>View History</button>"
+    // console.log("note button rendered")
+    // debugger
+}

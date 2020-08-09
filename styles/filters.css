@@ -1,11 +1,16 @@
-h2 {
-    font-size: large;
+.container__search {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted;   
+    padding: 1rem;
 }
 
-.filters {
+.container__filters {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 1rem;
     width: 25rem;
+    margin: 0;
+    padding: .25rem;
 }

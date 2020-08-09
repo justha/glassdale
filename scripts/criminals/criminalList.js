@@ -1,6 +1,7 @@
 import { useCriminals, getCriminals } from "./CriminalProvider.js";
 import { criminalHtml } from "./CriminalHtml.js";
 import { useCrimes } from "../crimes/CrimeProvider.js";
+import { alibiDialog } from "./AlibiDialog.js";
 
 const contentTarget = document.querySelector(".container__criminals")
 const eventHub = document.querySelector(".container")
@@ -52,10 +53,11 @@ const render = (criminals) => {
     })
     
     contentTarget.innerHTML =  `
-        <h4>Glassdale Criminals</h4>
+        <h2>Glassdale Criminals</h2>
             <article class="criminal__list">
             ${htmlRepresentations}
             </article>
+            ${alibiDialog()}
         `                   
 }
 

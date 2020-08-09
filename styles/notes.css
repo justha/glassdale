@@ -1,15 +1,15 @@
-h3 {
-    font-size: large;
-    margin: 0;
-}
-
 #noteForm {
     display: flex;
     flex-direction: column;
     width: 20rem;
-    margin: 1rem;
+    margin: 0 0 1rem 0;
 }
 
 #noteForm--saveNote {
     width: 5rem;
+}
+
+.container__noteHistory, 
+.container__noteForm {
+    padding: .25rem;
 }

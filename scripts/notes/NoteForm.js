@@ -24,7 +24,7 @@ eventHub.addEventListener("click", (clickEvent) => {
 // NOTE--button needs to reside outside of the <form> tags 
 const render = () => {
 contentTarget.innerHTML = `
-<h3>Note Form</h3>
+<h3>Enter Your Notes Here</h3>
 <form id="noteForm">
     <input type="text" id="noteForm--author" placeholder="enter your name"></input>
     <input type="text" id="noteForm--suspect" placeholder="possible suspect(s)"></input>

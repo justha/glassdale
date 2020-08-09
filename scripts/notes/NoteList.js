@@ -11,7 +11,10 @@ const contentTarget = document.querySelector(".container__noteList")
 
 const render = (notes) => {
     contentTarget.innerHTML = notes.map((noteObj) => {
-        return noteHtml(noteObj)
+        return `
+            <h2>Note History/h2>
+            ${noteHtml(noteObj)}
+            `
     }
     ).join("")
 }

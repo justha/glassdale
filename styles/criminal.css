@@ -1,8 +1,3 @@
-h4 {
-    font-size: large;
-    font-weight: bold;
-}
-
 .criminal__list {
     display: flex;
     flex-wrap: wrap;
@@ -20,4 +15,8 @@ h4 {
     font-size: medium;
     font-weight: bold;
     padding: 0 0 .5rem 0;
+}
+
+.criminal__alibiButton {
+    margin: .5rem 0 0 0;
 }
