@@ -13,11 +13,14 @@ h1 {
     font-weight: bold;
 }
 
-h2, 
-h3 {
+h2 {
     font-size: large;
 }
 
+h3 {
+    font-size: medium;
+    margin: 0;
+}
 
 .container__content {
     display: flex;

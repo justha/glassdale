@@ -20,3 +20,12 @@
 .criminal__alibiButton {
     margin: .5rem 0 0 0;
 }
+
+.criminal__alibiDialogBox {
+    font-size: small;
+    border: 1px solid dimgrey;
+}
+
+.criminal__alibiAssociate {
+    padding: .5rem;
+}

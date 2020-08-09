@@ -13,7 +13,7 @@ export const criminalHtml = (criminalObj) => {
             <div class="criminal__termEnd"><b>Term End: </b>${new Date(criminalObj.incarceration.end).toLocaleDateString('en-US')}</div>
             <div class="criminal__officer"><b>Arresting Officer: </b>${criminalObj.arrestingOfficer}</div>
 
-            <button id="criminal__alibiButton--${criminalObj.id}">Associate Alibi</button>
+            <button class="criminal__alibiButton" id="criminal__alibiButton--${criminalObj.id}">Alibi</button>
         </section>
     `
 }
@@ -31,7 +31,7 @@ contentTarget.addEventListener("click", (clickEvent) => {
         })
         eventHub.dispatchEvent(alibiEvent)
         
-        // console.log checkpoint -- click on "Associate Alibi" button to confirm in console...
+        // console.log checkpoint -- click on "Alibi" button to confirm in console...
         console.log(`"alibiClicked" message dispatched...`, alibiEvent)
     }
 })
