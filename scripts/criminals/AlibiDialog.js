@@ -5,7 +5,7 @@ const eventHub = document.querySelector(".container")
 // event listener -- hear "alibiClicked"; .showModal() method 
 eventHub.addEventListener("alibiClicked", (clickEvent) => {
 
-    const contentTarget = document.querySelector (".alibiDialog")   
+    const contentTarget = document.querySelector (".criminal__alibiDialogBox")   
     const criminalId = clickEvent.detail.criminalChosen
     const allCriminals = useCriminals()
 
@@ -15,8 +15,10 @@ eventHub.addEventListener("alibiClicked", (clickEvent) => {
     
     const htmlRepresentation = targetCriminal.known_associates.map(associate => {
         return `
-            <h3>${associate.name}</h3>
-            <div>${associate.alibi}</div>
+            <section class="criminal__alibiAssociate">
+            <div><b>Associate:</b> ${associate.name}</div>
+            <div><b>Alibi:</b> ${associate.alibi}</div>
+            </section>
         `
         }).join("")
         
@@ -25,14 +27,13 @@ eventHub.addEventListener("alibiClicked", (clickEvent) => {
     
     // show dialog
     contentTarget.showModal()
-
 })
 
  
-
+//export alibiDialog() to add to CriminalList.js innerHTML
 export const alibiDialog = () => {
     return `
-    <dialog class="alibiDialog"></dialog>
+    <dialog class="criminal__alibiDialogBox"></dialog>
     `
 }
 
