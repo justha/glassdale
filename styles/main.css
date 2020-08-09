@@ -13,18 +13,22 @@ h1 {
     font-weight: bold;
 }
 
-h2 {
+h2, 
+h3 {
     font-size: large;
 }
+
 
 .container__content {
     display: flex;
     flex-direction: row;
     border: 1px dotted;   
+    padding: 1rem;
 }
 
 .container__right {
     display: flex;
     flex-direction: column;
-    border: 1px dotted;   
+    border: 1px dotted; 
+    padding: 1rem;
 }

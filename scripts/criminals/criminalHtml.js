@@ -19,16 +19,19 @@ export const criminalHtml = (criminalObj) => {
 }
 
 
-// event listener -- dispatch "alibiClicked"
+// event listener -- dispatch "alibiClicked"; use .split() method to capture criminalId from alibi button id
 contentTarget.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id.startsWith("criminal__alibiButton")) {
         const [prompt, criminalId] = clickEvent.target.id.split("--")
         
-        const alibiEvent = new CustomEvent ("alibiButtonClicked", {
+        const alibiEvent = new CustomEvent ("alibiClicked", {
             detail: {
                 criminalChosen: criminalId
             }
         })
         eventHub.dispatchEvent(alibiEvent)
+        
+        // console.log checkpoint -- click on "Associate Alibi" button to confirm in console...
+        console.log(`"alibiClicked" message dispatched...`, alibiEvent)
     }
 })

@@ -9,7 +9,7 @@ const eventHub = document.querySelector(".container")
 // })
 
 export const noteHistoryButton = () => {
-    contentTarget.innerHTML = "<button id=`noteHistory`>Note History</button>"
+    contentTarget.innerHTML = "<button id=`noteHistory`>View History</button>"
     // console.log("note button rendered")
     // debugger
 }
