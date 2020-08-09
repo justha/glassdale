@@ -1,8 +1,3 @@
-h4 {
-    font-size: large;
-    font-weight: bold;
-}
-
 .criminal__list {
     display: flex;
     flex-wrap: wrap;

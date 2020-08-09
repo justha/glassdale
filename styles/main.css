@@ -12,3 +12,19 @@ h1 {
     font-size: xx-large;
     font-weight: bold;
 }
+
+h2 {
+    font-size: large;
+}
+
+.container__content {
+    display: flex;
+    flex-direction: row;
+    border: 1px dotted;   
+}
+
+.container__right {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted;   
+}

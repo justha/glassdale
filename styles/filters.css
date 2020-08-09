@@ -1,8 +1,4 @@
-h2 {
-    font-size: large;
-}
-
-.filters {
+.container__filters {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -22,7 +22,7 @@
 //     })
 //     contentTarget.innerHTML =  
 //     `
-//     <h3>Glassdale Police Officers</h3>
+//     <h2>Glassdale Police Officers</h2>
 //     <article class="officer__list">
 //     ${htmlRepresentations}
 //     </article>

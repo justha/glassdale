@@ -52,7 +52,7 @@ const render = (criminals) => {
     })
     
     contentTarget.innerHTML =  `
-        <h4>Glassdale Criminals</h4>
+        <h2>Glassdale Criminals</h2>
             <article class="criminal__list">
             ${htmlRepresentations}
             </article>
