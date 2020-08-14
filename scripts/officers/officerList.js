@@ -5,7 +5,7 @@
 // const eventHub = document.querySelector(".container")
 
 // // Event Listener--Hear Event Hub =========================
-// eventHub.addEventListener("officerSelected", (changeEvent) => {
+// eventHub.addEventListener("officerSelected", changeEvent => {
 //     const officerSelected = changeEvent.detail.officerName
 //     const allOfficers = useOfficers()
 //     const filteredOfficers = allOfficers.filter((officerObj) => {

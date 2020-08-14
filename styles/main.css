@@ -13,14 +13,14 @@ h1 {
     font-weight: bold;
 }
 
-h2 {
+h2, h3 {
     font-size: large;
 }
 
-h3 {
+/* h3 {
     font-size: medium;
     margin: 0;
-}
+} */
 
 .container__content {
     display: flex;
@@ -29,9 +29,13 @@ h3 {
     padding: 1rem;
 }
 
+.container__left {
+    padding: 1rem;
+}
+
 .container__right {
     display: flex;
     flex-direction: column;
-    border: 1px dotted; 
     padding: 1rem;
+    background-color: lightgreen;
 }
