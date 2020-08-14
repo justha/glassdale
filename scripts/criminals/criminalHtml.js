@@ -19,7 +19,7 @@ export const criminalHtml = (criminalObj) => {
 }
 
 
-// event listener -- dispatch "alibiClicked"; use .split() method to capture criminalId from alibi button id
+// event listener -- dispatch "alibiClicked"; use .split() method to get criminalId from alibi button id
 contentTarget.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id.startsWith("criminal__alibiButton")) {
         const [prompt, criminalId] = clickEvent.target.id.split("--")

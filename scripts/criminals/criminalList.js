@@ -8,7 +8,7 @@ const eventHub = document.querySelector(".container")
 
 
 // Event Listener--hear "crimeSelected" =========================
-eventHub.addEventListener ("crimeSelected", (changeEvent) => {
+eventHub.addEventListener ("crimeSelected", changeEvent => {
 
     const crimeSelected = changeEvent.detail.crimeId 
     
@@ -31,11 +31,10 @@ eventHub.addEventListener ("crimeSelected", (changeEvent) => {
 
 
 // Event Listener--hear "officerSelected"=========================
-eventHub.addEventListener("officerSelected", (changeEvent) => {
-
+eventHub.addEventListener("officerSelected", changeEvent => {
     const officerSelected = changeEvent.detail.officerName
-
     const allCriminals = useCriminals()
+
     const filteredCriminals = allCriminals.filter((officerObj) => {
         return officerSelected === officerObj.arrestingOfficer
     })

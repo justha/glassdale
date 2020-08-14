@@ -2,25 +2,33 @@ import { useNotes, getNotes } from "./NoteProvider.js";
 import { noteHtml } from "./NoteHtml.js";
 
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".container__noteList")
-
-// event listener--hear "noteHistory" click event
-// eventHub.addEventListener("noteHistoryButtonClicked", noteList)
+const contentTarget = document.querySelector(".noteHistory__list")
 
 
+eventHub.addEventListener("noteSaved", () => {
+    const newNotes = useNotes()
+    renderNoteList(newNotes)
+})
 
-const render = (notes) => {
-    contentTarget.innerHTML = notes.map((noteObj) => {
-        return `
-            <h2>Note History/h2>
-            ${noteHtml(noteObj)}
-            `
-    }
-    ).join("")
+
+const renderNoteList = (notes) => {
+    let htmlRepresentations = ""
+
+    notes.forEach(note => {
+        htmlRepresentations += noteHtml(note)
+    })
+    
+    contentTarget.innerHTML =  `
+        <h2>Note History</h2>
+            <div class="noteList">
+            ${htmlRepresentations}
+            </div>
+        `                   
 }
+
 
 export const noteList = () => {
     getNotes()
     .then (useNotes)
-    .then (render)
+    .then (renderNoteList)
 }

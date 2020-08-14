@@ -1,9 +1,9 @@
 {
   "notes": [
     {
-      "author": "ella smith",
-      "suspect": "the suspect author is entering note about",
-      "comment": "aldf aldfj ;ald jf",
+      "author": "Ella Smith",
+      "suspect": "suspect zero",
+      "comment": "check 1-2-3",
       "timestamp": "8/1/2020",
       "id": 1
     },
@@ -20,6 +20,20 @@
       "comment": "Completely random guess. ",
       "timestamp": 1596482238633,
       "id": 3
+    },
+    {
+      "author": "Betty Flatley",
+      "suspect": "Emory",
+      "comment": "who else would it be",
+      "timestamp": 1597418127090,
+      "id": 4
+    },
+    {
+      "author": "Braden Stoltenberg",
+      "suspect": "Michel Stamm",
+      "comment": "or maybe it was Michel",
+      "timestamp": 1597421419431,
+      "id": 5
     }
   ]
 }

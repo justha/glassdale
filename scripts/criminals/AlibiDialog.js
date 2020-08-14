@@ -10,8 +10,7 @@ eventHub.addEventListener("alibiClicked", (clickEvent) => {
     const allCriminals = useCriminals()
 
     const targetCriminal = allCriminals.find(
-        (criminal) => criminal.id === parseInt(criminalId)
-        )
+        (criminal) => criminal.id === parseInt(criminalId))
     
     const htmlRepresentation = targetCriminal.known_associates.map(associate => {
         return `
@@ -25,7 +24,7 @@ eventHub.addEventListener("alibiClicked", (clickEvent) => {
 
     contentTarget.innerHTML = htmlRepresentation
     
-    // show dialog
+    // show dialog box
     contentTarget.showModal()
 })
 
