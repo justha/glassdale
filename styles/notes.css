@@ -41,8 +41,5 @@
     background-color: lightgreen;
     color: darkgreen;
     font-weight: bold;
-    border-top: none;
-    border-left: none;    
-    border-right: none;
-    border-bottom: .5px solid darkgreen;
+    border: .5px dotted darkgreen;
 }

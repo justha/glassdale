@@ -76,27 +76,6 @@
       "comment": "testing 1-2-3",
       "timestamp": 1597679360551,
       "id": 11
-    },
-    {
-      "author": "Katherine Thompson",
-      "suspect": "2",
-      "comment": "test 1-2-3",
-      "timestamp": 1597680098258,
-      "id": 12
-    },
-    {
-      "author": "Arne Carroll",
-      "suspect": "5",
-      "comment": "testing again",
-      "timestamp": 1597681854580,
-      "id": 13
-    },
-    {
-      "author": "Betty Flatley",
-      "suspect": "7",
-      "comment": "and again",
-      "timestamp": 1597684079880,
-      "id": 14
     }
   ]
 }

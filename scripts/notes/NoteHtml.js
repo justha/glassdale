@@ -13,14 +13,15 @@ export const noteHtml = (noteObj) => {
     `
 }
 
-
+// hear click event "deletButton--" + render deleteNote()
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteButton--")) {
-        const [prompt, noteId] = clickEvent.target.id.split("--")
-    }
+        const [ prompt, noteId ] = clickEvent.target.id.split("--")
+    
     deleteNote(noteId)
+    }
 })
 
 
