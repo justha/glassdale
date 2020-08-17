@@ -3,7 +3,7 @@ import { noteHtml } from "./NoteHtml.js";
 import { useCriminals } from "../criminals/CriminalProvider.js";
 
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".note__list")
+const contentTarget = document.querySelector(".container__noteList")
 
 
 // renders all notes 

@@ -3,10 +3,12 @@ import { getCriminals, useCriminals } from "../criminals/CriminalProvider.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".container__noteForm")
+const saveTarget = document.querySelector(".note__saveButton")
+
 
 // hear "noteSaved" click event + render saveNote()
 eventHub.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "noteForm--saveButton") {
+    if (clickEvent.target.id === "saveNoteButton") {
         const noteAuthor = document.querySelector("#noteForm--author")
         const noteSuspect = document.querySelector("#noteForm--suspect")
         const noteComment = document.querySelector("#noteForm--comment")
@@ -26,23 +28,25 @@ eventHub.addEventListener("click", (clickEvent) => {
 // Note Form: input fields + drop-down option selector
 const render = (criminals) => {
     contentTarget.innerHTML = `
-    <h3>Enter Your Notes Here</h3>
-    <form id="noteForm">
-        <input type="text" id="noteForm--author" placeholder="enter your name..."></input>
-        
-        <select id="noteForm--suspect" placeholder="possible suspect">
-            <option value="0">select a criminal...</option>
-            ${
-                criminals.map(criminalObj => {
-                return `<option value="${criminalObj.id}">${criminalObj.name}</option>`
-                })
-            }
-        </select>
-        
-        <textarea id="noteForm--comment" placeholder="comments here..."></textarea>
-    </form>
-
-    <button id="noteForm--saveButton">Save</button>
+        <h3>Enter Your Notes Here</h3>
+        <form id="noteForm">
+            <input type="text" id="noteForm--author" placeholder="enter your name..."></input>
+            
+            <select id="noteForm--suspect" placeholder="possible suspect">
+                <option value="0">select a criminal...</option>
+                ${
+                    criminals.map(criminalObj => {
+                    return `<option value="${criminalObj.id}">${criminalObj.name}</option>`
+                    })
+                }
+            </select>
+            
+            <textarea id="noteForm--comment" placeholder="comments here..."></textarea>
+        </form>
+    `
+    
+    saveTarget.innerHTML = `
+        <button id="saveNoteButton">Save</button>
     `
 }
 

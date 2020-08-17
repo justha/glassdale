@@ -2,7 +2,7 @@ const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".note__historyButton")
 
 contentTarget.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "noteHistory") {
+    if (clickEvent.target.id === "showNoteButton") {
         const customEvent = new CustomEvent ("historyClicked")
         eventHub.dispatchEvent(customEvent)
     }
@@ -10,6 +10,6 @@ contentTarget.addEventListener("click", clickEvent => {
 })
 
 export const noteHistoryButton = () => {
-    contentTarget.innerHTML = `<button class="button__noteHistory" id="noteHistory">Note History</button>`
+    contentTarget.innerHTML = `<button id="showNoteButton">Show History</button>`
 }
 

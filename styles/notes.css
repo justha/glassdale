@@ -19,9 +19,15 @@
     border: 1px dotted grey;
 }
 
-#noteForm--saveButton, 
-.button__noteHistory {
+.container__noteButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+#saveNoteButton, 
+#showNoteButton {
     width: 6rem;
+    margin: 0 1rem 0 0;
 }
 
 .note__card {
@@ -29,4 +35,11 @@
     padding: .5rem;
     font-size: small;
     border: 1px dotted darkgrey;
+}
+
+.note__deleteButton {
+    background-color: lightgreen;
+    color: darkgreen;
+    font-weight: bold;
+    border: .5px dotted darkgreen;
 }
