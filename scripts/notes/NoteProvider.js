@@ -15,12 +15,6 @@ export const useNotes = () => {
 }
 
 
-// dispatch "noteStateChanged" to event hub 
-export const dispatchNoteStateChange = () => {
-    const customEvent = new CustomEvent ("noteStateChanged")
-    eventHub.dispatchEvent(customEvent)
-}
-
 // saveNote
 export const saveNote = (note) => {
     const jsonNote = JSON.stringify(note)
@@ -35,3 +29,20 @@ export const saveNote = (note) => {
         .then(getNotes)
         .then(dispatchNoteStateChange)
 } 
+
+
+// deleteNote
+export const deleteNote = (noteId) => {
+
+    return fetch (`http://localhost:8088/notes/${noteId}`, {
+        method: "DELETE",
+    })
+        .then(getNotes)
+        .then(dispatchNoteStateChange)
+} 
+
+// dispatch "noteStateChanged" to event hub 
+export const dispatchNoteStateChange = () => {
+    const customEvent = new CustomEvent ("noteStateChanged")
+    eventHub.dispatchEvent(customEvent)
+}
