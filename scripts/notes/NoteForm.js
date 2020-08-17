@@ -1,10 +1,10 @@
-import { saveNote, useNotes } from "./NoteProvider.js";
+import { saveNote } from "./NoteProvider.js";
 import { getCriminals, useCriminals } from "../criminals/CriminalProvider.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".container__noteForm")
 
-// event listener -- hear "noteSaved" click event
+// hear "noteSaved" click event + render saveNote()
 eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id === "noteForm--saveButton") {
         const noteAuthor = document.querySelector("#noteForm--author")
@@ -17,13 +17,13 @@ eventHub.addEventListener("click", (clickEvent) => {
             comment: noteComment.value, 
             timestamp: Date.now()
         }
-        saveNote(newNote)
+        saveNote(newNote)        
     }
 })
 
 
-// NOTE--button has to reside OUTSIDE of <form> tags
-// note form with input fields AND drop-down option selector
+// NOTE: button has to reside OUTSIDE of <form> tags
+// Note Form: input fields + drop-down option selector
 const render = (criminals) => {
     contentTarget.innerHTML = `
     <h3>Enter Your Notes Here</h3>

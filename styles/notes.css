@@ -19,8 +19,9 @@
     border: 1px dotted grey;
 }
 
-#noteForm--saveButton {
-    width: 5rem;
+#noteForm--saveButton, 
+.button__noteHistory {
+    width: 6rem;
 }
 
 .note__card {
