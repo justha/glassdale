@@ -5,18 +5,28 @@
     margin: 0 0 1rem 0;
 }
 
-#noteForm--saveNote {
-    width: 5rem;
-}
-
 .container__noteHistory, 
 .container__noteForm {
     padding: .25rem;
 }
 
+#noteForm--author, 
+#noteForm--suspect, 
+#noteForm--comment {
+    background-color: lightgreen;
+    color: grey;
+    font-weight: bold;
+    border: 1px dotted grey;
+}
 
+#noteForm--saveButton, 
+.button__noteHistory {
+    width: 6rem;
+}
 
 .note__card {
+    margin: 1rem;
     padding: .5rem;
     font-size: small;
+    border: 1px dotted darkgrey;
 }

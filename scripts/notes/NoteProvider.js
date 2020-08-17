@@ -15,13 +15,13 @@ export const useNotes = () => {
 }
 
 
-// dispatch "noteSaved" to event hub 
-const dispatchEvent = () => {
-    const changeEventNote = new CustomEvent ("noteSaved")
-    eventHub.dispatchEvent(changeEventNote)
+// dispatch "noteStateChanged" to event hub 
+export const dispatchNoteStateChange = () => {
+    const customEvent = new CustomEvent ("noteStateChanged")
+    eventHub.dispatchEvent(customEvent)
 }
 
-
+// saveNote
 export const saveNote = (note) => {
     const jsonNote = JSON.stringify(note)
 
@@ -33,5 +33,5 @@ export const saveNote = (note) => {
         body: jsonNote
     })
         .then(getNotes)
-        .then(dispatchEvent)
+        .then(dispatchNoteStateChange)
 } 
