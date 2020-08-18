@@ -6,21 +6,46 @@ const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".container__noteList")
 
 
-// renders all notes 
-const renderNoteList = (notes) => {   
-   let htmlRepresentations = ""
+// add found-criminal-obj to collection of notes under new "criminal:" key + render all notes using that mapped array
+const renderNoteList = notes => {
+    const criminals = useCriminals()
 
-    notes.forEach(note => {
-        htmlRepresentations += noteHtml(note)
-    })
-    
-    contentTarget.innerHTML =  `
+    const htmlRepresentations = 
+        notes.reverse()
+        .map(noteObj => {
+            noteObj.criminal = criminals.find(criminalObj => {
+                return criminalObj.id === noteObj.criminalId
+            })
+            console.log("console log noteObj.criminal >>", noteObj.criminal)
+            return noteHtml(noteObj)
+        }).join("")
+
+    contentTarget.innerHTML = `
         <h2>Note History</h2>
-            <div class="noteList">
+        <div class="noteList">
             ${htmlRepresentations}
-            </div>
-        `                   
+        </div>
+    `
 }
+
+
+// render all notes w/o mapping notes.json criminalId[fk] to criminals array id[pk]
+// const renderNoteList = (notes) => {      
+//     let htmlRepresentations = ""
+
+//     notes.reverse().forEach(note => {
+//         htmlRepresentations += noteHtml(note)
+//     })
+    
+//     contentTarget.innerHTML =  `
+//         <h2>Note History</h2>
+//             <div class="noteList">
+//             ${htmlRepresentations}
+//             </div>
+//         `                   
+// }
+
+
 // export entire module to main.js so that noteList() loads on initial page load 
 export const noteList = () => {
     getNotes()

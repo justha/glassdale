@@ -39,7 +39,8 @@
 
 .note__deleteButton {
     background-color: lightgreen;
-    color: darkgreen;
+    color: dimgrey;
     font-weight: bold;
-    border: .5px dotted darkgreen;
+    border: .5px dotted dimgrey;
+    margin: .5rem 0 0 0;
 }

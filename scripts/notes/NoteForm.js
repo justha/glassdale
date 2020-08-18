@@ -10,12 +10,12 @@ const saveTarget = document.querySelector(".note__saveButton")
 eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id === "saveNoteButton") {
         const noteAuthor = document.querySelector("#noteForm--author")
-        const noteSuspect = document.querySelector("#noteForm--suspect")
+        const noteCriminal = document.querySelector("#noteForm--suspect")
         const noteComment = document.querySelector("#noteForm--comment")
-
+        
         const newNote = {
             author: noteAuthor.value, 
-            suspect: noteSuspect.value,
+            criminalId: noteCriminal.value,
             comment: noteComment.value, 
             timestamp: Date.now()
         }
