@@ -1,81 +1,81 @@
 {
   "notes": [
     {
-      "author": "Ella Smith",
-      "suspect": "suspect zero",
-      "comment": "check 1-2-3",
-      "timestamp": "8/1/2020",
-      "id": 1
-    },
-    {
-      "author": "test",
-      "suspect": "test",
-      "comment": "test",
-      "timestamp": 1596480142046,
-      "id": 2
-    },
-    {
       "author": "Inspector Gadget",
-      "suspect": "Hilario",
+      "criminalId": 10,
       "comment": "Completely random guess. ",
       "timestamp": 1596482238633,
       "id": 3
     },
     {
       "author": "Betty Flatley",
-      "suspect": "Emory",
+      "criminalId": 9,
       "comment": "who else would it be",
       "timestamp": 1597418127090,
       "id": 4
     },
     {
       "author": "Braden Stoltenberg",
-      "suspect": "Michel Stamm",
+      "criminalId": 8,
       "comment": "or maybe it was Michel",
       "timestamp": 1597421419431,
       "id": 5
     },
     {
-      "author": "Lazaro Leuschke",
-      "suspect": "31",
-      "comment": "maybe it was Vernice",
-      "timestamp": 1597424897308,
-      "id": 6
-    },
-    {
-      "author": "",
-      "suspect": "0",
-      "comment": "",
-      "timestamp": 1597425454331,
-      "id": 7
-    },
-    {
-      "author": "",
-      "suspect": "0",
-      "comment": "",
-      "timestamp": 1597678121505,
-      "id": 8
-    },
-    {
-      "author": "Lazaro Leuschke",
-      "suspect": "1",
-      "comment": "testing 1-2-3",
-      "timestamp": 1597678859788,
-      "id": 9
-    },
-    {
-      "author": "Lazaro Leuschke",
-      "suspect": "1",
-      "comment": "testing 1-2-3",
-      "timestamp": 1597678934142,
-      "id": 10
-    },
-    {
       "author": "Katherine Thompson",
-      "suspect": "2",
+      "criminalId": 2,
       "comment": "testing 1-2-3",
       "timestamp": 1597679360551,
       "id": 11
+    },
+    {
+      "author": "Lazaro Leuschke",
+      "criminalId": 6,
+      "comment": "check 1-2-3",
+      "timestamp": 1597691576919,
+      "id": 12
+    },
+    {
+      "author": "Braden Stoltenberg",
+      "criminalId": 4,
+      "comment": "trying again here",
+      "timestamp": 1597698138446,
+      "id": 13
+    },
+    {
+      "author": "Braden Stoltenberg",
+      "criminalId": 4,
+      "comment": "trying again here",
+      "timestamp": 1597698181355,
+      "id": 14
+    },
+    {
+      "author": "Karolann Green",
+      "criminalId": 8,
+      "comment": "and again",
+      "timestamp": 1597698309136,
+      "id": 15
+    },
+    {
+      "author": "lazaro Leuschke",
+      "criminalId": 1,
+      "comment": "hm will this work?",
+      "timestamp": 1597699459689,
+      "id": 16
+    },
+    {
+      "author": "lazaro Leuschke",
+      "criminalId": 1,
+      "comment": "hm will this work?",
+      "timestamp": 1597699467120,
+      "id": 17
+    },
+    {
+      "author": "Alessia Bailey",
+      "criminalId": 9,
+      "comment": "let's try again",
+      "timestamp": 1597700432090,
+      "id": 18
     }
   ]
 }
