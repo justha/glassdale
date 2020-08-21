@@ -28,7 +28,7 @@ eventHub.addEventListener("click", (clickEvent) => {
 // Note Form: input fields + drop-down option selector
 const render = (criminals) => {
     contentTarget.innerHTML = `
-        <h3>Enter Your Notes Here</h3>
+        <h2>Enter Your Notes Here</h2>
         <form id="noteForm">
             <input type="text" id="noteForm--author" placeholder="enter your name..."></input>
             
