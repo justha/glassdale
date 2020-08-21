@@ -12,7 +12,7 @@ export const criminalHtml = (criminalObj, facilities) => {
             <div class="criminal__termStart"><b>Term Start: </b>${new Date(criminalObj.incarceration.start).toLocaleDateString('en-US')}</div>
             <div class="criminal__termEnd"><b>Term End: </b>${new Date(criminalObj.incarceration.end).toLocaleDateString('en-US')}</div>
             <div class="criminal__officer"><b>Arresting Officer: </b>${criminalObj.arrestingOfficer}</div>
-            <div class="criminal__facility"><b>Facilities: </b></div>
+            <div class="criminal__facilities"><b>Facilities: </b></div>
                 <ul>${facilities.map(facility => `<li>${facility.facilityName}</li>`).join("")}</ul>
 
             <button class="criminal__alibiButton" id="criminal__alibiButton--${criminalObj.id}">Alibi</button>

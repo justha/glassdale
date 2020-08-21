@@ -52,11 +52,11 @@ const render = (criminals, allFacilities, allRelationships) => {
     const htmlRepresentations = criminals.map(criminal => {               
         // Step 2 - Filter all relationships to get only ones for this criminal
         const relationshipsForThisCriminal = allRelationships.filter(cf => cf.criminalId === criminal.id)
-            // Step 3 - Convert the relationships to facilities with map()
-            const facilities = relationshipsForThisCriminal.map(cf => {
-                const matchingFacilityObject = allFacilities.find(facility => facility.id === cf.facilityId)
-                return matchingFacilityObject
-            })
+        // Step 3 - Convert the relationships to facilities with map()
+        const facilities = relationshipsForThisCriminal.map(cf => {
+            const matchingFacilityObj = allFacilities.find(facility => facility.id === cf.facilityId)
+            return matchingFacilityObj
+        })
         
         // Step 4 - Must pass the matching facilities to the Criminal component
         return criminalHtml(criminal, facilities)

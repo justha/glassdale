@@ -6,7 +6,7 @@ contentTarget.addEventListener("click", clickEvent => {
         const customEvent = new CustomEvent ("showNotesClicked")
         eventHub.dispatchEvent(customEvent)
     }
-    console.log("EventListener dispatched showNotesClicked")
+    console.log("dispatched >> showNotesClicked")
 })
 
 export const showNotesButton = () => {

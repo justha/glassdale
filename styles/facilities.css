@@ -1,0 +1,22 @@
+.facilities__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.facilities__card {
+    font-size: small;
+    margin: .5%;
+    padding: 1.5%;
+    border: 1.5px solid whitesmoke;
+    width: 15rem;
+}
+
+.facilities__name {
+    margin: 0 0 .5rem 0;
+}
+
+#showFacilitiesButton {  
+    white-space: nowrap;
+    margin: 0 1rem 0 0;
+    margin: 0 2rem 0 2rem; 
+}
