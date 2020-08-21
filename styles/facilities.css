@@ -1,9 +1,9 @@
-.facilities__list {
+.facility__list {
     display: flex;
     flex-wrap: wrap;
 }
 
-.facilities__card {
+.facility__card {
     font-size: small;
     margin: .5%;
     padding: 1.5%;
@@ -11,7 +11,7 @@
     width: 15rem;
 }
 
-.facilities__name {
+.facility__name {
     margin: 0 0 .5rem 0;
 }
 
