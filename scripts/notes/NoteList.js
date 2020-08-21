@@ -16,7 +16,6 @@ const renderNoteList = notes => {
             noteObj.criminal = criminals.find(criminalObj => {
                 return criminalObj.id === noteObj.criminalId
             })
-            console.log("console log noteObj.criminal >>", noteObj.criminal)
             return noteHtml(noteObj)
         }).join("")
 
@@ -54,8 +53,8 @@ export const noteList = () => {
 }
 
 
-// hear "historyClicked" + render noteList()
-eventHub.addEventListener ("historyClicked", noteList)
+// hear "showNotesClicked" + render noteList()
+eventHub.addEventListener ("showNotesClicked", noteList)
 // hear "noteStateChanged" + render note list
 eventHub.addEventListener("noteStateChanged", () => {
     const newNotes = useNotes()

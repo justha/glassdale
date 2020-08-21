@@ -64,7 +64,7 @@ const render = (criminals, allFacilities, allRelationships) => {
     ).join("")
     
     contentTarget.innerHTML =  `
-        <h2>Glassdale Criminals</h2>
+        <h2>Criminals</h2>
             <article class="criminal__list">
             ${htmlRepresentations}
             </article>
