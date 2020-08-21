@@ -13,7 +13,7 @@
 #noteForm--author, 
 #noteForm--suspect, 
 #noteForm--comment {
-    background-color: lightgreen;
+    background-color: silver;
     color: grey;
     font-weight: bold;
     border: 1px dotted grey;
@@ -34,11 +34,11 @@
     margin: 1rem;
     padding: .5rem;
     font-size: small;
-    border: 1px dotted darkgrey;
+    border: 1px dotted whitesmoke;
 }
 
 .note__deleteButton {
-    background-color: lightgreen;
+    background-color: darkkhaki;
     color: dimgrey;
     font-weight: bold;
     border: .5px dotted dimgrey;

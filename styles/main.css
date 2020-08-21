@@ -13,19 +13,28 @@ h1 {
     font-weight: bold;
 }
 
-h2, h3 {
-    font-size: large;
+h2 {
+    font-size: x-large;
+    font-weight: bold;
 }
 
-/* h3 {
+h3 {
     font-size: medium;
-    margin: 0;
-} */
+    font-weight: bold;
+}
+
+.container__search {
+    display: flex;
+    flex-direction: column;
+    background-color: dimgrey; 
+    color: white;
+    padding: 1rem;
+}
 
 .container__content {
     display: flex;
     flex-direction: row;
-    border: 1px dotted;   
+    background-color: darkkhaki; 
     padding: 1rem;
 }
 
@@ -37,5 +46,5 @@ h2, h3 {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: lightgreen;
+    background-color: darkkhaki;
 }
