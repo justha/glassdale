@@ -25,7 +25,7 @@
 }
 
 #saveNoteButton, 
-#showNoteButton {
+#showNotesButton {
     width: 6rem;
     margin: 0 1rem 0 0;
 }
@@ -37,7 +37,7 @@
     border: 1px dotted whitesmoke;
 }
 
-.note__deleteButton {
+.button__deleteNote {
     background-color: darkkhaki;
     color: dimgrey;
     font-weight: bold;

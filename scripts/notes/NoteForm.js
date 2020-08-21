@@ -3,7 +3,7 @@ import { getCriminals, useCriminals } from "../criminals/CriminalProvider.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".container__noteForm")
-const saveTarget = document.querySelector(".note__saveButton")
+const saveTarget = document.querySelector(".button__saveNote")
 
 
 // hear "noteSaved" click event + render saveNote()
@@ -15,7 +15,7 @@ eventHub.addEventListener("click", (clickEvent) => {
         
         const newNote = {
             author: noteAuthor.value, 
-            criminalId: noteCriminal.value,
+            criminalId: parseInt(noteCriminal.value),
             comment: noteComment.value, 
             timestamp: Date.now()
         }

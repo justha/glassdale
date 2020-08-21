@@ -8,7 +8,7 @@ export const noteHtml = (noteObj) => {
             <div class="note__comment"><b>Comments: </b>${noteObj.comment}</div>
             <div class="note__timestamp"><b>Timestamp: </b>${new Date(noteObj.timestamp).toLocaleDateString('en-US')}</div>
             
-            <button class="note__deleteButton" id="deleteButton--${noteObj.id}">Delete</button>
+            <button class="button__deleteNote" id="deleteButton--${noteObj.id}">Delete</button>
         </section>
     `
 }
