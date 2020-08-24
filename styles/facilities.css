@@ -7,7 +7,9 @@
     font-size: small;
     margin: .5%;
     padding: 1.5%;
-    border: 1.5px solid whitesmoke;
+    background-color: #F9F4E9;
+    color: dimgrey;
+    border: 1.5px solid dimgrey;
     width: 15rem;
 }
 
@@ -15,8 +17,8 @@
     margin: 0 0 .5rem 0;
 }
 
-#showFacilitiesButton {  
+#showFacilitiesButton { 
+    background-color: #DBBE79; 
     white-space: nowrap;
     margin: 0 1rem 0 0;
-    margin: 0 2rem 0 2rem; 
 }

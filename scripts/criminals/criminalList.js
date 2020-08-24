@@ -28,7 +28,10 @@ eventHub.addEventListener ("crimeSelected", changeEvent => {
         return crimeObj.name === criminalObj.conviction
     })
 
-    render(filteredCriminals)
+    const facilities = useFacilities()
+    const criminalFacilities = useCriminalFacilities()
+
+    render(filteredCriminals, facilities, criminalFacilities)
 })
 
 
@@ -41,7 +44,10 @@ eventHub.addEventListener("officerSelected", changeEvent => {
         return officerSelected === officerObj.arrestingOfficer
     })
 
-    render(filteredCriminals)   
+    const facilities = useFacilities()
+    const criminalFacilities = useCriminalFacilities()
+
+    render(filteredCriminals, facilities, criminalFacilities)   
 })   
 
 

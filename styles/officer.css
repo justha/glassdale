@@ -3,11 +3,13 @@
     flex-wrap: wrap;
 }
 
-.officer__card { s
+.officer__card {
     font-size: small;
     margin: .5%;
     padding: 1.5%;
-    border: .5px solid lightgrey;
+    background-color: #D5EFF8;
+    color: dimgrey;
+    border: 1.5px solid dimgrey;
     width: 15rem;
 }
 
