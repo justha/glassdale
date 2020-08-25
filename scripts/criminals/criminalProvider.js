@@ -1,3 +1,5 @@
+const eventHub = document.querySelector(".container")
+
 let criminals = []
 
 export const getCriminals = () => {
@@ -10,4 +12,10 @@ export const getCriminals = () => {
 
 export const useCriminals = () => {
     return criminals.slice()
+}
+
+// dispatch "filterStateChanged"
+export const dispatchFilterStateChange = () => {
+    const customEvent = new CustomEvent ("filterStateChanged")
+    eventHub.dispatchEvent(customEvent)
 }

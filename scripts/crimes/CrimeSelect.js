@@ -1,6 +1,5 @@
 import { getCrimes, useCrimes } from "./CrimeProvider.js";
 
-
 const contentTarget = document.querySelector(".filters__crime")
 const eventHub = document.querySelector(".container")
 
