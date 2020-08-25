@@ -1,9 +1,10 @@
-import { useCriminals, getCriminals, dispatchFilterStateChange } from "./CriminalProvider.js";
+import { useCriminals, getCriminals } from "./CriminalProvider.js";
 import { criminalHtml } from "./CriminalHtml.js";
 import { useCrimes } from "../crimes/CrimeProvider.js";
 import { alibiDialog } from "./AlibiDialog.js";
 import { getFacilities, useFacilities } from "../facilities/FacilityProvider.js";
 import { getCriminalFacilities, useCriminalFacilities } from "../facilities/CriminalFacilityProvider.js";
+import { dispatchFilterStateChange } from "../filterStateChange.js";
 
 const contentTarget = document.querySelector(".container__criminals")
 const eventHub = document.querySelector(".container")
@@ -16,6 +17,7 @@ let officerSelected = 0
 let crimeObj = ""
 
 
+// hear "crimeSelected" + re-assign crimeSelected value
 eventHub.addEventListener ("crimeSelected", changeEvent => {
     crimeSelected = changeEvent.detail.crimeId    
     const crimes = useCrimes()
@@ -28,12 +30,13 @@ eventHub.addEventListener ("crimeSelected", changeEvent => {
 })
 
 
+// hear "officerSelected" + re-assign officerSelected value
 eventHub.addEventListener("officerSelected", changeEvent => {
     officerSelected = changeEvent.detail.officerName
     dispatchFilterStateChange()
 })
 
-
+// hear "filterSTateChanged" + re-assign filteredCriminals value
 eventHub.addEventListener ("filterStateChanged", changeEvent => {   
     const allCriminals = useCriminals()
     let filteredCriminals = allCriminals
@@ -53,9 +56,11 @@ eventHub.addEventListener ("filterStateChanged", changeEvent => {
         })
     }
     if (crimeSelected !== 0 && officerSelected !== 0) {
-        filteredCriminals = allCriminals.filter((officer) => {
-            return officerSelected === officer.arrestingOfficer
-        })
+        filteredCriminals = allCriminals
+            .filter((criminal) => {
+                return crimeObj.name === criminal.conviction})
+            .filter((officer) => {
+                return officerSelected === officer.arrestingOfficer})
     }
 
     render(filteredCriminals, facilities, criminalFacilities)   
