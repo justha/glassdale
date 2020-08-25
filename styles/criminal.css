@@ -7,7 +7,9 @@
     font-size: small;
     margin: .5%;
     padding: 1.5%;
-    border: 1.5px solid whitesmoke;
+    background-color: #D2EFD8;
+    color: dimgrey;
+    border: 1.5px solid dimgrey;
     width: 15rem;
 }
 

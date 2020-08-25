@@ -4,6 +4,7 @@ const contentTarget = document.querySelector(".filters__officer")
 const eventHub = document.querySelector(".container")
 
 
+
 // Event Listener--dispatch to Event Hub ============================
 contentTarget.addEventListener("change", (changeEvent) => {
     const customOfficerEvent = new CustomEvent ("officerSelected", {
@@ -19,7 +20,7 @@ contentTarget.addEventListener("change", (changeEvent) => {
 const render = officersCollection => {
     contentTarget.innerHTML = `
         <select class="dropdown" id="officerSelect">
-            <option value="0">Please select an officer...</option>
+            <option value="0">Arresting Officer...</option>
                 ${
                     officersCollection.map(
                         officersObj => {

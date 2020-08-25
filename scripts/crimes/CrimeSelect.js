@@ -1,6 +1,5 @@
 import { getCrimes, useCrimes } from "./CrimeProvider.js";
 
-
 const contentTarget = document.querySelector(".filters__crime")
 const eventHub = document.querySelector(".container")
 
@@ -21,7 +20,7 @@ contentTarget.addEventListener("change", (changeEvent) => {
 const render = crimesCollection => {
     contentTarget.innerHTML = `
         <select class="dropdown" id="crimeSelect">
-            <option value="0">Please select a crime...</option>
+            <option value="0">Crime...</option>
                 ${
                     crimesCollection.map(
                         crimesObj => {

@@ -4,45 +4,67 @@ import { useCrimes } from "../crimes/CrimeProvider.js";
 import { alibiDialog } from "./AlibiDialog.js";
 import { getFacilities, useFacilities } from "../facilities/FacilityProvider.js";
 import { getCriminalFacilities, useCriminalFacilities } from "../facilities/CriminalFacilityProvider.js";
+import { dispatchFilterStateChange } from "../filterStateChange.js";
 
 const contentTarget = document.querySelector(".container__criminals")
 const eventHub = document.querySelector(".container")
 
 
-// Event Listener--hear "crimeSelected" =========================
-eventHub.addEventListener ("crimeSelected", changeEvent => {
+// refactor to filter criminal list by MULTIPLE items (e.g., crimes AND arresting officer) 
+let crimeSelected = 0
+let officerSelected = 0
 
-    const crimeSelected = changeEvent.detail.crimeId 
-    
-    
-    // .find() the crime obj that correlates to the crimeId selected from CrimeSelect drop-down
-    // use parseInt() to convert crime.id value string into an integer (to match value format in crimesArray)
-    const crimesArray = useCrimes()
-    const crimeObj = crimesArray.find((crime) => {
+let crimeObj = ""
+
+
+// hear "crimeSelected" + re-assign crimeSelected value
+eventHub.addEventListener ("crimeSelected", changeEvent => {
+    crimeSelected = changeEvent.detail.crimeId    
+    const crimes = useCrimes()
+
+    crimeObj = crimes.find(crime => {
         return parseInt(crimeSelected) === crime.id
     })
 
-
-    const allCriminals = useCriminals()
-    const filteredCriminals = allCriminals.filter((criminalObj) => {
-        return crimeObj.name === criminalObj.conviction
-    })
-
-    render(filteredCriminals)
+    dispatchFilterStateChange()
 })
 
 
-// Event Listener--hear "officerSelected"=========================
+// hear "officerSelected" + re-assign officerSelected value
 eventHub.addEventListener("officerSelected", changeEvent => {
-    const officerSelected = changeEvent.detail.officerName
+    officerSelected = changeEvent.detail.officerName
+    dispatchFilterStateChange()
+})
+
+// hear "filterSTateChanged" + re-assign filteredCriminals value
+eventHub.addEventListener ("filterStateChanged", changeEvent => {   
     const allCriminals = useCriminals()
+    let filteredCriminals = allCriminals
 
-    const filteredCriminals = allCriminals.filter((officerObj) => {
-        return officerSelected === officerObj.arrestingOfficer
-    })
+    const facilities = useFacilities()
+    const criminalFacilities = useCriminalFacilities()
 
-    render(filteredCriminals)   
-})   
+
+    if (crimeSelected !== 0 && officerSelected === 0) {
+        filteredCriminals = allCriminals.filter((criminal) => {
+            return crimeObj.name === criminal.conviction
+        })
+    }
+    if (crimeSelected === 0 && officerSelected !== 0) {
+        filteredCriminals = allCriminals.filter((officer) => {
+            return officerSelected === officer.arrestingOfficer
+        })
+    }
+    if (crimeSelected !== 0 && officerSelected !== 0) {
+        filteredCriminals = allCriminals
+            .filter((criminal) => {
+                return crimeObj.name === criminal.conviction})
+            .filter((officer) => {
+                return officerSelected === officer.arrestingOfficer})
+    }
+
+    render(filteredCriminals, facilities, criminalFacilities)   
+})
 
 
 // render 
@@ -113,3 +135,46 @@ export const criminalList = () => {
 //         render(criminals)   
 //     })
 // }
+
+
+
+// // original Event Listener--hear "crimeSelected" =========================
+// eventHub.addEventListener ("crimeSelected", changeEvent => {
+
+//     const crimeSelected = changeEvent.detail.crimeId 
+    
+    
+//     // .find() the crime obj that correlates to the crimeId selected from CrimeSelect drop-down
+//     // use parseInt() to convert crime.id value string into an integer (to match value format in crimesArray)
+//     const crimesArray = useCrimes()
+//     const crimeObj = crimesArray.find((crime) => {
+//         return parseInt(crimeSelected) === crime.id
+//     })
+
+
+//     const allCriminals = useCriminals()
+//     const filteredCriminals = allCriminals.filter((criminalObj) => {
+//         return crimeObj.name === criminalObj.conviction
+//     })
+
+//     const facilities = useFacilities()
+//     const criminalFacilities = useCriminalFacilities()
+
+//     render(filteredCriminals, facilities, criminalFacilities)
+// })
+
+
+// // original Event Listener--hear "officerSelected"=========================
+// eventHub.addEventListener("officerSelected", changeEvent => {
+//     const officerSelected = changeEvent.detail.officerName
+//     const allCriminals = useCriminals()
+
+//     const filteredCriminals = allCriminals.filter((officerObj) => {
+//         return officerSelected === officerObj.arrestingOfficer
+//     })
+
+//     const facilities = useFacilities()
+//     const criminalFacilities = useCriminalFacilities()
+
+//     render(filteredCriminals, facilities, criminalFacilities)   
+// })   

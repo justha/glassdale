@@ -13,9 +13,9 @@
 #noteForm--author, 
 #noteForm--suspect, 
 #noteForm--comment {
-    background-color: silver;
-    color: grey;
-    font-weight: bold;
+    background-color: #DBBE79;
+    color: dimgrey;
+    font-weight: normal;
     border: 1px dotted grey;
 }
 
@@ -26,19 +26,22 @@
 
 #saveNoteButton, 
 #showNotesButton {
+    background-color: #DBBE79;
+    border: 1px solid dimgrey;
     width: 6rem;
     margin: 0 1rem 0 0;
 }
 
 .note__card {
-    margin: 1rem;
+    font-size: small;
+    margin: 0;
     padding: .5rem;
     font-size: small;
-    border: 1px dotted whitesmoke;
+    border: none;
 }
 
 .button__deleteNote {
-    background-color: darkkhaki;
+    background-color: #f3e9d2;
     color: dimgrey;
     font-weight: bold;
     border: .5px dotted dimgrey;
