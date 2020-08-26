@@ -11,8 +11,8 @@ const eventHub = document.querySelector(".container")
 
 
 // refactor to filter criminal list by MULTIPLE items (e.g., crimes AND arresting officer) 
-let crimeSelected = 0
-let officerSelected = 0
+let crimeSelected = "0"
+let officerSelected = "0"
 
 let crimeObj = ""
 
@@ -45,17 +45,17 @@ eventHub.addEventListener ("filterStateChanged", changeEvent => {
     const criminalFacilities = useCriminalFacilities()
 
 
-    if (crimeSelected !== 0 && officerSelected === 0) {
+    if (crimeSelected !== "0" && officerSelected === "0") {
         filteredCriminals = allCriminals.filter((criminal) => {
             return crimeObj.name === criminal.conviction
         })
     }
-    if (crimeSelected === 0 && officerSelected !== 0) {
+    if (crimeSelected === "0" && officerSelected !== "0") {
         filteredCriminals = allCriminals.filter((officer) => {
             return officerSelected === officer.arrestingOfficer
         })
     }
-    if (crimeSelected !== 0 && officerSelected !== 0) {
+    if (crimeSelected !== "0" && officerSelected !== "0") {
         filteredCriminals = allCriminals
             .filter((criminal) => {
                 return crimeObj.name === criminal.conviction})
